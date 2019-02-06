@@ -3,6 +3,10 @@ body {
     background: rgb(13,26,38);
 }
 
+:root {
+    --main-color: rgba(230,230,0);
+}
+
 #h1_container {
     display: flex;
     justify-content: center;
@@ -13,7 +17,7 @@ h1 {
     font-family: 'Alfa Slab One', cursive;
     font-size: 3em;
     font-weight: normal;
-    color: white;
+    color: var(--main-color);
     border: 2px solid yellow;
     border-radius: 15px;
 	width: 400px;
@@ -34,7 +38,7 @@ h1 {
 }
 
 p > u {
-    color: rgba(230,230,0);
+    color: var(--main-color);
 }
 .syntax > p {
     color: rgba(255,255,255);
@@ -63,8 +67,8 @@ h2 {
 
 .bio-container {
     color: white;
-    margin: 0px 3em;
-    padding: 0.3em 0.8em;
+    margin: 0px 2.6em;
+    padding: 0.3em 3em;
     background-color: rgba(0,0,0,0.5);
 }
 
@@ -73,13 +77,21 @@ h2 {
     text-decoration: underline;
     font-weight: normal;
     font-size: 2em;
-    color: rgb(230,230,0);
+    color: var(--main-color);
+}
+
+.bio-element:hover {
+    transition: 0.8s ease-out;
+    transform: scale(1.05);
 }
 
 h3 + p {
     font-family: 'Denk One', sans-serif;
     font-size: 1.5em;
+    transition: 3s;
 }
+
+
 
 .video-container {
     display: flex;
